@@ -43,7 +43,7 @@ public class MessageServiceInterceptor implements HandlerInterceptor {
    public void postHandle(HttpServletRequest request, HttpServletResponse response, 
       Object handler, ModelAndView modelAndView) throws Exception {
 	   String a = request.getMethod();
-	   System.out.println("==========================================  " + a);
+	   System.out.println("==========================================   " + a);
 	   System.out.println("Post Handle method is Calling");
 	   
    }
