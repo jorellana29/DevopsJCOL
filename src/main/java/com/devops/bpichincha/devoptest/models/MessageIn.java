@@ -1,12 +1,19 @@
 package com.devops.bpichincha.devoptest.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class MessageIn {
 
-
+	@JsonProperty("message")
 	private String message;
+	
+	@JsonProperty("to")
 	private String toPerson;
+	
+	@JsonProperty("from")
 	private String fromPerson;
+	
+	@JsonProperty("timeToLifeSec")
 	private int timeToLifeSec;
 	
 	public MessageIn() {
