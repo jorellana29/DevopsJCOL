@@ -1,4 +1,6 @@
-FROM openjdk:11
+FROM openjdk:jdk-alpine
+VOLUME /tmp
+ARG JAR_FILE
 EXPOSE 8090
-ADD target/devop-test.jar devop-test.jar
-ENTRYPOINT ["java","-jar","/devop-test.jar"]
+COPY {JAR_FILE} devop-test.jar
+ENTRYPOINT ["java", "-jar", "/devop-test.jar"]
