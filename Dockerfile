@@ -1,6 +1,4 @@
-FROM openjdk:8-jdkd-alpine
-VOLUME /tmp
+FROM openjdk:11
 EXPOSE 8287
-ARG JAR_FILE=target/devop-test.jar
-ADD ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+ADD target/devop-test.jar devop-test.jar
+ENTRYPOINT ["java","-jar","/devop-test.jar"]
