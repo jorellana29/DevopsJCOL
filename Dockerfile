@@ -1,4 +1,4 @@
-FROM openjdk:11-jdk-alpine
+FROM openjdk:11
 EXPOSE 8080
-ADD target/devop-test.jar devop-test.jar
-ENTRYPOINT ["java","-jar","/devop-test.jar devop-test.jar"]
+ADD target/devops-test.jar devops-test.jar
+ENTRYPOINT ["jar","-jar","/devops-test.jar"]
